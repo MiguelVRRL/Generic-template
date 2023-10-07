@@ -40,6 +40,8 @@ func setupDB() {
    log.Fatal("Payment failed")
   }
   DB = db
-  DB.AutoMigrate(models.User{},models.DataUser{})
+  if err := DB.AutoMigrate(models.User{},models.DataUser{}); err != nil {
+    log.Fatal(err.Error())
+  }
 
 }

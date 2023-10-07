@@ -1,4 +1,4 @@
-module gihub.com/MiguelVRRL/template
+module github.com/MiguelVRRL/template
 
 go 1.19
 
